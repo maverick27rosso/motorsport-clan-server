@@ -1,0 +1,11 @@
+# Blueprint Render: definisce il web service del server stanze.
+# Su Render: New > Blueprint, collega il repo GitHub di questa cartella.
+services:
+  - type: web
+    name: motorsport-clan-server
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    autoDeploy: true
