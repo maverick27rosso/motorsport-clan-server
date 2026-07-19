@@ -1,9 +1,12 @@
 # Blueprint Render: definisce il web service del server stanze.
 # Su Render: New > Blueprint, collega il repo GitHub di questa cartella.
+# REGION: frankfurt (Europa) - i giocatori sono in Italia; il default di Render
+# (Oregon, USA) aggiungeva ~200ms di RTT strutturale a ogni scambio.
 services:
   - type: web
-    name: motorsport-clan-server
+    name: motorsport-clan-server-eu
     runtime: node
+    region: frankfurt
     plan: free
     buildCommand: npm install
     startCommand: npm start
